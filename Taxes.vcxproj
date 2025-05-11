@@ -127,7 +127,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Property.cpp" />
     <ClCompile Include="Taxes.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Property.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
