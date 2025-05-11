@@ -17,9 +17,9 @@ public:
 	void addProperty(Property* property);
 	void removeProperty(size_t index);
 
-	inline string getFullname() { return fullname; };
-	inline string getInn() { return inn; };
-	inline vector<Property*> getProperties() { return properties; };
+	inline string getFullname() const { return fullname; };
+	inline string getInn() const { return inn; };
+	inline vector<Property*> getProperties() const { return properties; };
 
 	inline void setFullname(string value) { fullname = value; };
 	inline void setInn(string value) { inn = value; };
