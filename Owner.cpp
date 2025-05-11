@@ -6,3 +6,8 @@ Owner::Owner(string fullname, string inn, vector<Property*> const& properties):
 	this->fullname = fullname;
 	this->inn = inn;
 }
+
+void Owner::addProperty(Property* property)
+{
+	properties.push_back(property);
+}

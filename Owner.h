@@ -12,6 +12,8 @@ class Owner
 public:
 	Owner(string fullname, string inn, vector<Property*> const& properties);
 
+	void addProperty(Property* property);
+
 	inline string getFullname() { return fullname; };
 	inline string getInn() { return inn; };
 	inline vector<Property*> getProperties() { return properties; };
