@@ -6,5 +6,6 @@ class CountryHouse :
     unsigned int distanceFromCity;
 public:
     CountryHouse(int worth, unsigned int distanceFromCity);
+    double ñalculationTax() override;
 };
 
