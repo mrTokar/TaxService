@@ -12,6 +12,8 @@ class Owner
 public:
 	Owner(string fullname, string inn, vector<Property*> const& properties);
 
+	double calculateTax();
+
 	void addProperty(Property* property);
 	void removeProperty(size_t index);
 
