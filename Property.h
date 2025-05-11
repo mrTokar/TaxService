@@ -4,8 +4,8 @@ class Property
 protected:
 	int worth;
 public:
-	Property(int wort);
-	virtual int ñalculation() = 0;
-	int incomeTax();
+	Property(int worth);
+	virtual int ñalculationTax() = 0;
+	int calculatIonIncomeTax();
 };
 

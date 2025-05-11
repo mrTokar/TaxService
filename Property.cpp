@@ -1,11 +1,11 @@
 #include "Property.h"
 
-Property::Property(int wort)
+Property::Property(int worth)
 {
 	this->worth = worth;
 }
 
-int Property::incomeTax()
+int Property::calculatIonIncomeTax()
 {
 	return worth * 0.13;
 }
