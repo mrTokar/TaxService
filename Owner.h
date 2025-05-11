@@ -13,6 +13,7 @@ public:
 	Owner(string fullname, string inn, vector<Property*> const& properties);
 
 	void addProperty(Property* property);
+	void removeProperty(size_t index);
 
 	inline string getFullname() { return fullname; };
 	inline string getInn() { return inn; };

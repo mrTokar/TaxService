@@ -11,3 +11,8 @@ void Owner::addProperty(Property* property)
 {
 	properties.push_back(property);
 }
+
+void Owner::removeProperty(size_t index)
+{
+	properties.erase(properties.begin() + index);
+}
