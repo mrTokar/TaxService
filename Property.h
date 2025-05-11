@@ -2,9 +2,9 @@
 class Property
 {
 protected:
-	int worth;
+	unsigned int worth;
 public:
-	Property(int worth);
+	Property(unsigned int worth);
 	virtual int ñalculationTax() = 0;
 	int calculatIonIncomeTax();
 };

@@ -1,6 +1,6 @@
 #include "Property.h"
 
-Property::Property(int worth)
+Property::Property(unsigned int worth)
 {
 	this->worth = worth;
 }
