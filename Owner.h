@@ -11,5 +11,12 @@ class Owner
 	vector<Property*> properties;
 public:
 	Owner(string fullname, string inn, vector<Property*> const& properties);
+
+	inline string getFullname() { return fullname; };
+	inline string getInn() { return inn; };
+	inline vector<Property*> getProperties() { return properties; };
+
+	inline void setFullname(string value) { fullname = value; };
+	inline void setInn(string value) { inn = value; };
 };
 
