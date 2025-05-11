@@ -6,5 +6,6 @@ protected:
 public:
 	Property(int wort);
 	virtual int ñalculation() = 0;
+	int incomeTax();
 };
 
