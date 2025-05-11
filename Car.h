@@ -6,5 +6,6 @@ class Car :
     float horsepower;
 public:
     Car(int worth, float horsepower);
+    double ñalculationTax() override;
 };
 
