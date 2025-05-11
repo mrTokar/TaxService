@@ -5,7 +5,7 @@ Property::Property(unsigned int worth)
 	this->worth = worth;
 }
 
-int Property::calculatIonIncomeTax()
+double Property::calculationIncomeTax()
 {
 	return worth * 0.13;
 }
