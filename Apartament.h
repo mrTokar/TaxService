@@ -6,5 +6,6 @@ class Apartament :
     double square;
 public:
     Apartament(int worth, double square);
+    double ñalculationTax() override;
 };
 
