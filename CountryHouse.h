@@ -3,8 +3,8 @@
 class CountryHouse :
     public Property
 {
-    double distanceFromCity;
+    unsigned int distanceFromCity;
 public:
-    CountryHouse(int worth, double distanceFromCity);
+    CountryHouse(int worth, unsigned int distanceFromCity);
 };
 
