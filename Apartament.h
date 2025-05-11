@@ -3,5 +3,8 @@
 class Apartament :
     public Property
 {
+    double square;
+public:
+    Apartament(int worth, double square);
 };
 
