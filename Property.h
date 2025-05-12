@@ -1,5 +1,8 @@
 #pragma once
-class Property
+#include "Ijsonio.h"
+
+class Property:
+	public Ijsonio
 {
 protected:
 	unsigned int worth;
