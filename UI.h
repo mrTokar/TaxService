@@ -17,6 +17,7 @@ void editOwner(Owner& owner);
 void deleteOwner(vector<Owner>& owners);
 
 void changeOwnerName(Owner& owner);
+void changeOwnerInn(Owner& owner);
 
 void addProperty(Owner& owner);
 void deleteProperty(Owner& owner);

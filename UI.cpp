@@ -122,6 +122,32 @@ void changeOwnerName(Owner& owner)
     owner.setFullname(name);
 }
 
+void changeOwnerInn(Owner& owner)
+{
+    string inn;
+    bool valid = true;
+    do {
+        valid = true;
+        cout << "Ââåäèòå ÈÍÍ (10 öèôð): ";
+        cin >> inn;
+
+        if (inn.size() == 10) {
+            for (auto& c : inn)
+            {
+                if (!isdigit(c)) {
+                    valid = false;
+                }
+            }
+        }
+        else {
+            valid = false;
+        }
+
+    } while (!valid);
+
+    owner.setInn(inn);
+}
+
 void addProperty(Owner& owner)
 {
     int usr;
