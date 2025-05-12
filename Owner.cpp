@@ -27,6 +27,23 @@ nlohmann::json Owner::toJson()
 	return json;
 }
 
+void Owner::fromJson(nlohmann::json json)
+{
+	fullname = json["fullname"].get<string>();
+	inn = json["inn"].get<string>();
+	auto jpropertyes = json["properties"].get<vector<nlohmann::json>>();
+
+	string key;
+	Property* property;
+	for (auto& jproperty : jpropertyes)
+	{
+		key = jproperty.items().begin().key();
+		property = PropertySimpleFactory::getProperty(key);
+		property->fromJson(jproperty[key]);
+		properties.push_back(property);
+	}
+}
+
 double Owner::calculateTax()
 {
 	double tax = 0;
