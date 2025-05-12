@@ -11,6 +11,16 @@ void printOwner(Owner const& owner)
     cout << endl;
 }
 
+void printOwners(vector<Owner> const& owners)
+{
+    cout << "=====================" <<endl;
+    for (const auto& owner : owners)
+    {
+        printOwner(owner);
+    }
+    cout << "=====================" << endl;
+}
+
 Owner createNewOwner()
 {
     string name;

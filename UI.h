@@ -8,6 +8,7 @@
 #define UI
 
 void printOwner(Owner const& owner);
+void printOwners(vector<Owner> const& owners);
 
 Owner createNewOwner();
 void deleteOwner(vector<Owner>& owners);
