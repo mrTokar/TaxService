@@ -7,5 +7,6 @@ class Car :
 public:
     Car(int worth, float horsepower);
     double ñalculationTax() override;
+    void fromJson(nlohmann::json json) override;
 };
 
