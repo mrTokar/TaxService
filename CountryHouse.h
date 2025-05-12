@@ -1,5 +1,6 @@
 #pragma once
 #include "Property.h"
+
 class CountryHouse :
     public Property
 {
@@ -7,5 +8,6 @@ class CountryHouse :
 public:
     CountryHouse(int worth, unsigned int distanceFromCity);
     double ñalculationTax() override;
+    void fromJson(nlohmann::json json) override;
 };
 

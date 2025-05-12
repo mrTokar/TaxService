@@ -16,3 +16,9 @@ double CountryHouse::ñalculationTax()
 		return worth * COUNTRY_HOUSE_TAX;
 	}
 }
+
+void CountryHouse::fromJson(nlohmann::json json)
+{
+	distanceFromCity = json["distance"].get<unsigned int>();
+	worth = json["worth"].get<unsigned int>();
+}
