@@ -11,6 +11,47 @@ void printOwner(Owner const& owner)
     cout << endl;
 }
 
+Owner createNewOwner()
+{
+    string name;
+    cout << "Введите ФИО: ";
+    getline(cin, name);
+
+    string inn;
+    bool valid = true;
+    do {
+        valid = true;
+        cout << "Введите ИНН (10 цифр): ";
+        cin >> inn;
+        
+        if (inn.size() == 10) {
+            for (auto& c : inn)
+            {
+                if (!isdigit(c)) {
+                    valid = false;
+                }
+            }
+        }
+        else {
+            valid = false;
+        }
+
+    } while (!valid);
+
+    Owner owner(name, inn, {});
+
+    int cnt;
+    do {
+        cout << "Введите количество имущества: ";
+        cin >> cnt;
+    } while (cnt <= 0);
+
+    for (size_t i = 0; i < cnt; i++)
+    {
+        addProperty(owner);
+    }
+}
+
 void addProperty(Owner& owner)
 {
     int usr;

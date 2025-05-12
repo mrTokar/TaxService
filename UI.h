@@ -9,6 +9,8 @@
 
 void printOwner(Owner const& owner);
 
+Owner createNewOwner();
+
 void addProperty(Owner& owner);
 void deleteProperty(Owner& owner);
 
