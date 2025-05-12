@@ -8,15 +8,14 @@ using namespace std;
 
 vector<Owner> generateOwners();
 void freememory(vector<Owner>& owners);
+void show_menu();
 
 int main() {
     setlocale(LC_CTYPE, "rus");
 	auto owners = generateOwners();
-    
-	// Вывод информации о собственниках и их собственности
-    for (const auto& owner : owners) {
-		printOwner(owner);
-    }
+    printOwners(owners);
+
+
 
 	freememory(owners);
     return 0;
@@ -59,4 +58,19 @@ void freememory(vector<Owner>& owners)
 		}
 	}
 	owners.clear();
+}
+
+void show_menu(vector<Owner>& array)
+{
+    printOwners(array);
+    int cmd;
+    do {
+        cout << "Введите номер команды:\n" << \
+            "\t1) Добавить нового владельца\n" << \
+            "\t2) Удалить существующего владельца\n" << \
+            "\t3) Редактировать существующего владельца\n" << \
+            ">>>";
+        cin >> cmd;
+    } while (cmd < 1 || 3 < cmd);
+
 }
