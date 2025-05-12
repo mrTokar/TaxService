@@ -39,3 +39,19 @@ Property* createNewCar()
     Property* car = new Car(worth, horsepower);
     return car;
 }
+
+Property* createNewApartament()
+{
+    unsigned int worth;
+    cout << "¬ведите стоимость квартиры: ";
+    cin >> worth;
+
+    double square;
+    do {
+        cout << "¬ведите площадь квартиры (в м^2): ";
+        cin >> square;
+    } while (square <= 0);
+
+    Property* apart = new Apartament(worth, square);
+    return apart;
+}
