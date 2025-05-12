@@ -1,4 +1,5 @@
 ﻿#include <iostream>
+#include <Windows.h>
 #include "Owner.h"
 #include "Apartament.h"
 #include "Car.h"
@@ -8,15 +9,17 @@ using namespace std;
 
 vector<Owner> generateOwners();
 void freememory(vector<Owner>& owners);
-Owner& chooseOwner(vector<Owner>& owners);
-bool show_menu(vector<Owner>& array);
+    Owner& chooseOwner(vector<Owner>& owners);
+    bool show_menu(vector<Owner>& array);
 
 int main() {
-    setlocale(LC_CTYPE, "rus");
+    setlocale(LC_ALL, "ru");
 	auto owners = generateOwners();
-    printOwners(owners);
-
-
+    
+    bool exit;
+    do {
+        exit = show_menu(owners);
+    } while (!exit);
 
 	freememory(owners);
     return 0;
@@ -85,7 +88,7 @@ bool show_menu(vector<Owner>& array)
             "\t3) Редактировать существующего владельца\n" << \
             ">>>";
         cin >> cmd;
-    } while (cmd < 1 || 3 < cmd);
+    } while (cmd < 0 || 3 < cmd);
 
     switch (cmd)
     {

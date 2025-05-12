@@ -24,7 +24,8 @@ void printOwners(vector<Owner> const& owners)
 Owner createNewOwner()
 {
     string name;
-    cout << "Введите ФИО: ";
+    cin.ignore(numeric_limits<streamsize>::max(), '\n');
+    cout << "Введите ФИО (без кирилицы): ";
     getline(cin, name);
 
     string inn;
@@ -117,7 +118,8 @@ void deleteOwner(vector<Owner>& owners)
 void changeOwnerName(Owner& owner)
 {
     string name;
-    cout << "Введите новое имя: ";
+    cin.ignore(numeric_limits<streamsize>::max(), '\n');
+    cout << "Введите новое имя (без кирилицы): ";
     getline(cin, name);
     owner.setFullname(name);
 }
@@ -152,7 +154,7 @@ void addProperty(Owner& owner)
 {
     int usr;
     do {
-        cout << "Ввведите новое имущество:" << \
+        cout << "Ввведите новое имущество:\n" << \
             "\t1) Car\n" << \
             "\t2) Apartament\n" << \
             "\t3) Country House\n" << \
