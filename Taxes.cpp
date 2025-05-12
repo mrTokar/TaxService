@@ -46,9 +46,9 @@ vector<Owner> generateOwners()
     Property* house4 = new CountryHouse(3500000, 60);
 
     // Создание собственников
-    Owner owner1("Иван Иванов", "1234567890", { apart1, car1, house1, apart2 });
-    Owner owner2("Петр Петров", "0987654321", { car2, house2, apart3, car3 });
-    Owner owner3("Сергей Сергеев", "1122334455", { house3, apart4, car4, house4 });
+    Owner owner1("Ivan Ivanov", "1234567890", { apart1, car1, house1, apart2 });
+    Owner owner2("Petr Petrov", "0987654321", { car2, house2, apart3, car3 });
+    Owner owner3("Serge Smyrnov", "1122334455", { house3, apart4, car4, house4 });
 
     vector<Owner> owners = { owner1, owner2, owner3 };
 	return owners;
