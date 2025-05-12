@@ -133,6 +133,7 @@
     <ClCompile Include="Owner.cpp" />
     <ClCompile Include="Property.cpp" />
     <ClCompile Include="Taxes.cpp" />
+    <ClCompile Include="UI.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Apartament.h" />
@@ -141,6 +142,7 @@
     <ClInclude Include="Owner.h" />
     <ClInclude Include="Property.h" />
     <ClInclude Include="TaxRate.h" />
+    <ClInclude Include="UI.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

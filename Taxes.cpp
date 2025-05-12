@@ -3,11 +3,11 @@
 #include "Apartament.h"
 #include "Car.h"
 #include "CountryHouse.h"
+#include "UI.h"
 using namespace std;
 
 vector<Owner> generateOwners();
 void freememory(vector<Owner>& owners);
-void printOwner(Owner const& owner);
 
 int main() {
     setlocale(LC_CTYPE, "rus");
@@ -59,13 +59,4 @@ void freememory(vector<Owner>& owners)
 		}
 	}
 	owners.clear();
-}
-
-void printOwner(Owner const& owner)
-{
-    cout << "Собственник: " << owner.getFullname() << ", ИНН: " << owner.getInn() << std::endl;
-    for (const auto& property : owner.getProperties()) {
-        cout << "\tОбъект: " << typeid(*property).name() << ", ценность: " << property->getWorth() << endl;
-    }
-    cout << endl;
 }
