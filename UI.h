@@ -8,7 +8,10 @@
 #define UI
 
 void printOwner(Owner const& owner);
+
 void addProperty(Owner& owner);
+void deleteProperty(Owner& owner);
+
 Property* createNewCar();
 Property* createNewApartament();
 Property* createNewCountryHouse();

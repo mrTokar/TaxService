@@ -42,6 +42,21 @@ void addProperty(Owner& owner)
     owner.addProperty(new_property);
 }
 
+void deleteProperty(Owner& owner)
+{
+    printOwner(owner);
+
+    int size = owner.getProperties().size();
+    int usr;
+    do {
+        cout << "¬ведите номер имущества: ";
+        cin >> usr;
+        usr--;
+    } while (usr < 0 || size <= usr);
+
+    owner.removeProperty(usr);
+}
+
 Property* createNewCar()
 {
     int worth;
