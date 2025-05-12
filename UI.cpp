@@ -26,9 +26,11 @@ void addProperty(Owner const& owner)
 
 Property* createNewCar()
 {
-    unsigned int worth;
-    cout << "¬ведите стоимость машины: ";
-    cin >> worth;
+    int worth;
+    do {
+        cout << "¬ведите стоимость машины: ";
+        cin >> worth;
+    } while (worth <= 0);
 
     float horsepower;
     do {
@@ -42,9 +44,11 @@ Property* createNewCar()
 
 Property* createNewApartament()
 {
-    unsigned int worth;
-    cout << "¬ведите стоимость квартиры: ";
-    cin >> worth;
+    int worth;
+    do {
+        cout << "¬ведите стоимость квартиры: ";
+        cin >> worth;
+    } while (worth <= 0);
 
     double square;
     do {
@@ -58,9 +62,11 @@ Property* createNewApartament()
 
 Property* createNewCountryHouse()
 {
-    unsigned int worth;
-    cout << "¬ведите стоимость квартиры: ";
-    cin >> worth;
+    int worth;
+    do {
+        cout << "¬ведите стоимость квартиры: ";
+        cin >> worth;
+    } while (worth <= 0);
 
     int distance;
     do {
