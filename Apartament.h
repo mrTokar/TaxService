@@ -7,5 +7,6 @@ class Apartament :
 public:
     Apartament(int worth, double square);
     double ñalculationTax() override;
+    void fromJson(nlohmann::json) override;
 };
 

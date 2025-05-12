@@ -16,3 +16,9 @@ double Apartament::ñalculationTax()
 		return worth * Apartment_LUXURY_TAX;
 	}
 }
+
+void Apartament::fromJson(nlohmann::json json)
+{
+	square = json["square"].get<double>();
+	worth = json["worth"].get<unsigned int>();
+}
