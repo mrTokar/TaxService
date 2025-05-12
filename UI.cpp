@@ -71,7 +71,7 @@ void deleteOwner(vector<Owner>& owners)
         index--;
     } while (index < 0 || owners.size() <= index);
 
-    owners.erase(owners.begin() + index)l
+    owners.erase(owners.begin() + index);
 }
 
 void addProperty(Owner& owner)
