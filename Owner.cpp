@@ -7,6 +7,26 @@ Owner::Owner(string fullname, string inn, vector<Property*> const& properties):
 	this->inn = inn;
 }
 
+nlohmann::json Owner::toJson()
+{
+	nlohmann::json json;
+	json["fullname"] = fullname;
+	json["inn"] = inn;
+	json["sumtax"] = calculateTax();
+
+	vector<nlohmann::json> jproperties;
+
+	for (auto property : properties)
+	{
+		nlohmann::json jproperty;
+		jproperty[typeid(*property).name()] = property->toJson();
+		jproperties.push_back(jproperty);
+	}
+
+	json["properties"] = jproperties;
+	return json;
+}
+
 double Owner::calculateTax()
 {
 	double tax = 0;

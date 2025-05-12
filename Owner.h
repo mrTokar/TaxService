@@ -13,6 +13,8 @@ class Owner:
 public:
 	Owner(string fullname, string inn, vector<Property*> const& properties);
 
+	nlohmann::json toJson() override;
+
 	double calculateTax();
 	double calculateIncomeTax();
 
