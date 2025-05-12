@@ -90,12 +90,16 @@ void editOwner(Owner& owner)
     switch (cmd)
     {
     case 1:
+        changeOwnerName(owner);
         break;
     case 2:
+        changeOwnerInn(owner);
         break;
     case 3:
+        addProperty(owner);
         break;
     case 4:
+        deleteProperty(owner);
         break;
     default:
         break;
