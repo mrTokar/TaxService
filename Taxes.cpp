@@ -9,7 +9,7 @@ using namespace std;
 vector<Owner> generateOwners();
 void freememory(vector<Owner>& owners);
 Owner& chooseOwner(vector<Owner>& owners);
-void show_menu();
+bool show_menu(vector<Owner>& array);
 
 int main() {
     setlocale(LC_CTYPE, "rus");
@@ -73,12 +73,13 @@ Owner& chooseOwner(vector<Owner>& owners)
     return owners[index];
 }
 
-void show_menu(vector<Owner>& array)
+bool show_menu(vector<Owner>& array)
 {
     printOwners(array);
     int cmd;
     do {
         cout << "Введите номер команды:\n" << \
+            "\t0) Выход\n" << \
             "\t1) Добавить нового владельца\n" << \
             "\t2) Удалить существующего владельца\n" << \
             "\t3) Редактировать существующего владельца\n" << \
@@ -86,4 +87,22 @@ void show_menu(vector<Owner>& array)
         cin >> cmd;
     } while (cmd < 1 || 3 < cmd);
 
+    switch (cmd)
+    {
+    case 0:
+        return true;
+    case 1:
+        array.push_back(createNewOwner());
+        break;
+    case 2:
+        deleteOwner(array);
+        break;
+    case 3:
+        Owner & ptr = chooseOwner(array);
+        editOwner(ptr);
+        break;
+    default:
+        break;
+    }
+    return false;
 }
