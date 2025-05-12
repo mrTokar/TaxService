@@ -60,6 +60,8 @@ Owner createNewOwner()
     {
         addProperty(owner);
     }
+
+    return owner;
 }
 
 void editOwner(Owner& owner)
@@ -158,7 +160,7 @@ void addProperty(Owner& owner)
         cin >> usr;
     } while (usr < 1 || 3 < usr);
 
-    Property* new_property;
+    Property* new_property = nullptr;
     switch (usr)
     {
     case 1:

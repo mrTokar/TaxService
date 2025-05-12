@@ -98,8 +98,7 @@ bool show_menu(vector<Owner>& array)
         deleteOwner(array);
         break;
     case 3:
-        Owner & ptr = chooseOwner(array);
-        editOwner(ptr);
+        editOwner(chooseOwner(array));
         break;
     default:
         break;
