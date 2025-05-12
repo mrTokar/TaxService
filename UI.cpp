@@ -52,6 +52,18 @@ Owner createNewOwner()
     }
 }
 
+void deleteOwner(vector<Owner>& owners)
+{
+    int index;
+    do {
+        cout << "¬ведите номер владельца: ";
+        cin >> index;
+        index--;
+    } while (index < 0 || owners.size() <= index);
+
+    owners.erase(owners.begin() + index)l
+}
+
 void addProperty(Owner& owner)
 {
     int usr;
