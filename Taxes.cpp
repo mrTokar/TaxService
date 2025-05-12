@@ -86,9 +86,11 @@ bool show_menu(vector<Owner>& array)
             "\t1) Добавить нового владельца\n" << \
             "\t2) Удалить существующего владельца\n" << \
             "\t3) Редактировать существующего владельца\n" << \
+            "\t4) Посчитать налог на имущество\n" << \
+            "\t5) Посчитать подоходный налог\n" << \
             ">>>";
         cin >> cmd;
-    } while (cmd < 0 || 3 < cmd);
+    } while (cmd < 0 || 5 < cmd);
 
     switch (cmd)
     {
@@ -102,6 +104,12 @@ bool show_menu(vector<Owner>& array)
         break;
     case 3:
         editOwner(chooseOwner(array));
+        break;
+    case 4:
+        calculateTax(chooseOwner(array));
+        break;
+    case 5:
+        caluclateIncomeTax(chooseOwner(array));
         break;
     default:
         break;

@@ -201,6 +201,7 @@ void calculateTax(Owner& owner)
     cout.precision(2);
     cout << fixed;
     cout << "Налог на имущество составляет: " << owner.calculateTax();
+    cout << endl;
     cout.unsetf(ios::fixed);
 }
 
@@ -209,6 +210,7 @@ void caluclateIncomeTax(Owner& owner)
     cout.precision(2);
     cout << fixed;
     cout << "Налог на имущество составляет: " << owner.calculateIncomeTax();
+    cout << endl;
     cout.unsetf(ios::fixed);
 }
 
