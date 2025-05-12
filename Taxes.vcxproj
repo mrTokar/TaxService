@@ -133,6 +133,7 @@
     <ClCompile Include="Ijsonio.cpp" />
     <ClCompile Include="Owner.cpp" />
     <ClCompile Include="Property.cpp" />
+    <ClCompile Include="PropertySimpleFactory.cpp" />
     <ClCompile Include="Taxes.cpp" />
     <ClCompile Include="UI.cpp" />
   </ItemGroup>
@@ -144,6 +145,7 @@
     <ClInclude Include="json.hpp" />
     <ClInclude Include="Owner.h" />
     <ClInclude Include="Property.h" />
+    <ClInclude Include="PropertySimpleFactory.h" />
     <ClInclude Include="TaxRate.h" />
     <ClInclude Include="UI.h" />
   </ItemGroup>
