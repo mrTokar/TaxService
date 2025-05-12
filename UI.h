@@ -11,5 +11,6 @@ void printOwner(Owner const& owner);
 void addProperty(Owner const& owner);
 Property* createNewCar();
 Property* createNewApartament();
+Property* createNewCountryHouse();
 
 #endif // !UI

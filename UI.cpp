@@ -55,3 +55,19 @@ Property* createNewApartament()
     Property* apart = new Apartament(worth, square);
     return apart;
 }
+
+Property* createNewCountryHouse()
+{
+    unsigned int worth;
+    cout << "¬ведите стоимость квартиры: ";
+    cin >> worth;
+
+    int distance;
+    do {
+        cout << "¬ведите площадь квартиры (в м^2): ";
+        cin >> distance;
+    } while (distance <= 0);
+
+    Property* house = new CountryHouse(worth, distance);
+    return house;
+}
