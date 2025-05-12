@@ -22,6 +22,6 @@ double Car::ñalculationTax()
 
 void Car::fromJson(nlohmann::json json)
 {
-	horsepower = json["Car"]["horsepower"].get<float>();
-	worth = json["Car"]["worth"].get<unsigned int>();
+	horsepower = json["horsepower"].get<float>();
+	worth = json["worth"].get<unsigned int>();
 }
