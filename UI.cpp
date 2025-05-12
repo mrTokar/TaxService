@@ -74,6 +74,34 @@ Owner createNewOwner()
     }
 }
 
+void editOwner(Owner& owner)
+{
+    int cmd;
+    do {
+        cout << "Введите номер команды:\n" << \
+            "\t1) Изменить имя\n" << \
+            "\t2) Изменить ИНН\n" << \
+            "\t3) Добавить собственность\n" << \
+            "\t4) Удалить существующую собственность\n" << \
+            ">>>";
+        cin >> cmd;
+    } while (cmd < 1 || 4 < cmd);
+
+    switch (cmd)
+    {
+    case 1:
+        break;
+    case 2:
+        break;
+    case 3:
+        break;
+    case 4:
+        break;
+    default:
+        break;
+    }
+}
+
 void deleteOwner(vector<Owner>& owners)
 {
     int index;
