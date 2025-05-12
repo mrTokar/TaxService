@@ -22,3 +22,11 @@ void Apartament::fromJson(nlohmann::json json)
 	square = json["square"].get<double>();
 	worth = json["worth"].get<unsigned int>();
 }
+
+nlohmann::json Apartament::toJson()
+{
+	nlohmann::json json;
+	json["square"] = square;
+	json["worth"] = worth;
+	return json;
+}
