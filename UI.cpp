@@ -23,3 +23,19 @@ void addProperty(Owner const& owner)
         cin >> usr;
     } while (usr < 1 || 3 < usr);
 }
+
+Property* createNewCar()
+{
+    unsigned int worth;
+    cout << "¬ведите стоимость машины: ";
+    cin >> worth;
+
+    float horsepower;
+    do {
+        cout << "¬ведите мощность машины (в л.с.): ";
+        cin >> horsepower;
+    } while (horsepower <= 0);
+
+    Property* car = new Car(worth, horsepower);
+    return car;
+}
