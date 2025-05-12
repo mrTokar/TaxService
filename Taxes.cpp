@@ -8,6 +8,7 @@ using namespace std;
 
 vector<Owner> generateOwners();
 void freememory(vector<Owner>& owners);
+Owner& chooseOwner(vector<Owner>& owners);
 void show_menu();
 
 int main() {
@@ -58,6 +59,18 @@ void freememory(vector<Owner>& owners)
 		}
 	}
 	owners.clear();
+}
+
+Owner& chooseOwner(vector<Owner>& owners)
+{
+    int index;
+    do {
+        cout << "Введите номер владельца: ";
+        cin >> index;
+        index--;
+    } while (index < 0 || owners.size() <= index);
+
+    return owners[index];
 }
 
 void show_menu(vector<Owner>& array)

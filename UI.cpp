@@ -21,18 +21,6 @@ void printOwners(vector<Owner> const& owners)
     cout << "=====================" << endl;
 }
 
-Owner& chooseOwner(vector<Owner>& owners)
-{
-    int index;
-    do {
-        cout << "¬ведите номер владельца: ";
-        cin >> index;
-        index--;
-    } while (index < 0 || owners.size() <= index);
-
-    return owners[index];
-}
-
 Owner createNewOwner()
 {
     string name;
