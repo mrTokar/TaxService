@@ -204,6 +204,14 @@ void calculateTax(Owner& owner)
     cout.unsetf(ios::fixed);
 }
 
+void caluclateIncomeTax(Owner& owner)
+{
+    cout.precision(2);
+    cout << fixed;
+    cout << "Налог на имущество составляет: " << owner.calculateIncomeTax();
+    cout.unsetf(ios::fixed);
+}
+
 Property* createNewCar()
 {
     int worth;

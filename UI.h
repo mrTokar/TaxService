@@ -21,6 +21,7 @@ void addProperty(Owner& owner);
 void deleteProperty(Owner& owner);
 
 void calculateTax(Owner& owner);
+void caluclateIncomeTax(Owner& owner);
 
 Property* createNewCar();
 Property* createNewApartament();
