@@ -10,8 +10,14 @@
 void printOwner(Owner const& owner);
 void printOwners(vector<Owner> const& owners);
 
+Owner& chooseOwner(vector<Owner>& owners);
+
 Owner createNewOwner();
+void editOwner(Owner& owner);
 void deleteOwner(vector<Owner>& owners);
+
+void changeOwnerName(Owner& owner);
+void changeOwnerInn(Owner& owner);
 
 void addProperty(Owner& owner);
 void deleteProperty(Owner& owner);

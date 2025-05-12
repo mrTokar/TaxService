@@ -21,6 +21,18 @@ void printOwners(vector<Owner> const& owners)
     cout << "=====================" << endl;
 }
 
+Owner& chooseOwner(vector<Owner>& owners)
+{
+    int index;
+    do {
+        cout << "Введите номер владельца: ";
+        cin >> index;
+        index--;
+    } while (index < 0 || owners.size() <= index);
+
+    return owners[index];
+}
+
 Owner createNewOwner()
 {
     string name;
@@ -62,6 +74,38 @@ Owner createNewOwner()
     }
 }
 
+void editOwner(Owner& owner)
+{
+    int cmd;
+    do {
+        cout << "Введите номер команды:\n" << \
+            "\t1) Изменить имя\n" << \
+            "\t2) Изменить ИНН\n" << \
+            "\t3) Добавить собственность\n" << \
+            "\t4) Удалить существующую собственность\n" << \
+            ">>>";
+        cin >> cmd;
+    } while (cmd < 1 || 4 < cmd);
+
+    switch (cmd)
+    {
+    case 1:
+        changeOwnerName(owner);
+        break;
+    case 2:
+        changeOwnerInn(owner);
+        break;
+    case 3:
+        addProperty(owner);
+        break;
+    case 4:
+        deleteProperty(owner);
+        break;
+    default:
+        break;
+    }
+}
+
 void deleteOwner(vector<Owner>& owners)
 {
     int index;
@@ -78,6 +122,40 @@ void deleteOwner(vector<Owner>& owners)
     }
 
     owners.erase(owners.begin() + index);
+}
+
+void changeOwnerName(Owner& owner)
+{
+    string name;
+    cout << "Введите новое имя: ";
+    getline(cin, name);
+    owner.setFullname(name);
+}
+
+void changeOwnerInn(Owner& owner)
+{
+    string inn;
+    bool valid = true;
+    do {
+        valid = true;
+        cout << "Введите ИНН (10 цифр): ";
+        cin >> inn;
+
+        if (inn.size() == 10) {
+            for (auto& c : inn)
+            {
+                if (!isdigit(c)) {
+                    valid = false;
+                }
+            }
+        }
+        else {
+            valid = false;
+        }
+
+    } while (!valid);
+
+    owner.setInn(inn);
 }
 
 void addProperty(Owner& owner)
