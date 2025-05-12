@@ -17,6 +17,16 @@ double Owner::calculateTax()
 	return tax;
 }
 
+double Owner::calculateIncomeTax()
+{
+	double tax = 0;
+	for (auto property : properties)
+	{
+		tax += property->calculationIncomeTax();
+	}
+	return tax;
+}
+
 void Owner::addProperty(Property* property)
 {
 	properties.push_back(property);

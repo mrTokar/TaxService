@@ -13,6 +13,7 @@ public:
 	Owner(string fullname, string inn, vector<Property*> const& properties);
 
 	double calculateTax();
+	double calculateIncomeTax();
 
 	void addProperty(Property* property);
 	void removeProperty(size_t index);
