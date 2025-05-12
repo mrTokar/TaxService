@@ -114,6 +114,14 @@ void deleteOwner(vector<Owner>& owners)
     owners.erase(owners.begin() + index);
 }
 
+void changeOwnerName(Owner& owner)
+{
+    string name;
+    cout << "¬ведите новое им€: ";
+    getline(cin, name);
+    owner.setFullname(name);
+}
+
 void addProperty(Owner& owner)
 {
     int usr;
