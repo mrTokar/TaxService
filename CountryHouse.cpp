@@ -22,3 +22,11 @@ void CountryHouse::fromJson(nlohmann::json json)
 	distanceFromCity = json["distance"].get<unsigned int>();
 	worth = json["worth"].get<unsigned int>();
 }
+
+nlohmann::json CountryHouse::toJson()
+{
+	nlohmann::json json;
+	json["distance"] = distanceFromCity;
+	json["worth"] = worth;
+	return json;
+}
