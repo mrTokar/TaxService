@@ -10,3 +10,16 @@ void printOwner(Owner const& owner)
     }
     cout << endl;
 }
+
+void addProperty(Owner const& owner)
+{
+    int usr;
+    do {
+        cout << "¬введите новое имущество:" << \
+            "\t1) Car\n" << \
+            "\t2) Apartament\n" << \
+            "\t3) Country House\n" << \
+            ">>>";
+        cin >> usr;
+    } while (usr < 1 || 3 < usr);
+}
