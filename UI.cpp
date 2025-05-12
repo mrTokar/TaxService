@@ -11,7 +11,7 @@ void printOwner(Owner const& owner)
     cout << endl;
 }
 
-void addProperty(Owner const& owner)
+void addProperty(Owner& owner)
 {
     int usr;
     do {
@@ -22,6 +22,24 @@ void addProperty(Owner const& owner)
             ">>>";
         cin >> usr;
     } while (usr < 1 || 3 < usr);
+
+    Property* new_property;
+    switch (usr)
+    {
+    case 1:
+        new_property = createNewCar();
+        break;
+    case 2:
+        new_property = createNewApartament();
+        break;
+    case 3:
+        new_property = createNewCountryHouse();
+        break;
+    default:
+        break;
+    }
+
+    owner.addProperty(new_property);
 }
 
 Property* createNewCar()
