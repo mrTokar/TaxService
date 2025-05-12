@@ -70,6 +70,12 @@ void deleteOwner(vector<Owner>& owners)
         cin >> index;
         index--;
     } while (index < 0 || owners.size() <= index);
+    
+    size_t cnt = owners[index].getProperties().size();
+    for (size_t i = 0; i < cnt; i++)
+    {
+        owners[index].removeProperty(0);
+    }
 
     owners.erase(owners.begin() + index);
 }

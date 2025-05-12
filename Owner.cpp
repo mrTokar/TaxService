@@ -24,5 +24,6 @@ void Owner::addProperty(Property* property)
 
 void Owner::removeProperty(size_t index)
 {
+	delete properties[index];
 	properties.erase(properties.begin() + index);
 }
