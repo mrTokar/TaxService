@@ -196,6 +196,14 @@ void deleteProperty(Owner& owner)
     owner.removeProperty(usr);
 }
 
+void calculateTax(Owner& owner)
+{
+    cout.precision(2);
+    cout << fixed;
+    cout << "Налог на имущество составляет: " << owner.calculateTax();
+    cout.unsetf(ios::fixed);
+}
+
 Property* createNewCar()
 {
     int worth;

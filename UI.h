@@ -20,6 +20,8 @@ void changeOwnerInn(Owner& owner);
 void addProperty(Owner& owner);
 void deleteProperty(Owner& owner);
 
+void calculateTax(Owner& owner);
+
 Property* createNewCar();
 Property* createNewApartament();
 Property* createNewCountryHouse();
