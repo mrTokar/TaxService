@@ -11,6 +11,8 @@ public:
 	virtual double ñalculationTax() = 0;
 	double calculationIncomeTax();
 
+	nlohmann::json toJson() override;
+
 	inline unsigned int getWorth() const { return worth; };
 	inline void setWorth(unsigned int value) { worth = value; };
 };

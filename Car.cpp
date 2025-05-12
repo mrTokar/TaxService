@@ -25,11 +25,3 @@ void Car::fromJson(nlohmann::json json)
 	horsepower = json["horsepower"].get<float>();
 	worth = json["worth"].get<unsigned int>();
 }
-
-nlohmann::json Car::toJson()
-{
-	nlohmann::json json;
-	json["horsepower"] = horsepower;
-	json["worth"] = worth;
-	return json;
-}
