@@ -24,7 +24,6 @@ Owner readjson()
 	}
 	catch (exception e) {
 		clog << "ERROR: " << e.what() << endl;
-		cout << "ERROR: " << e.what() << endl;
 		return Owner("", "", {});
 	}
 	return owner;
