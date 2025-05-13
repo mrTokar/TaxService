@@ -19,6 +19,11 @@ double Apartament::ñalculationTax()
 
 void Apartament::fromJson(nlohmann::json json)
 {
-	square = json["square"].get<double>();
-	worth = json["worth"].get<unsigned int>();
+	try {
+		square = json["square"].get<double>();
+		worth = json["worth"].get<unsigned int>();
+	}
+	catch (...) {
+		throw std::runtime_error("No required keys in json");
+	}
 }

@@ -19,6 +19,11 @@ double CountryHouse::ñalculationTax()
 
 void CountryHouse::fromJson(nlohmann::json json)
 {
-	distanceFromCity = json["distance"].get<unsigned int>();
-	worth = json["worth"].get<unsigned int>();
+	try {
+		distanceFromCity = json["distance"].get<unsigned int>();
+		worth = json["worth"].get<unsigned int>();
+	}
+	catch (...) {
+		throw std::runtime_error("No required keys in json");
+	}
 }

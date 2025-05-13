@@ -22,6 +22,11 @@ double Car::ñalculationTax()
 
 void Car::fromJson(nlohmann::json json)
 {
-	horsepower = json["horsepower"].get<float>();
-	worth = json["worth"].get<unsigned int>();
+	try {
+		horsepower = json["horsepower"].get<float>();
+		worth = json["worth"].get<unsigned int>();
+	}
+	catch (...) {
+		throw std::runtime_error("No required keys in json");
+	}
 }
