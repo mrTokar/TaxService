@@ -135,6 +135,7 @@
     <ClCompile Include="Property.cpp" />
     <ClCompile Include="PropertySimpleFactory.cpp" />
     <ClCompile Include="Taxes.cpp" />
+    <ClCompile Include="TaxService.cpp" />
     <ClCompile Include="UI.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -147,6 +148,7 @@
     <ClInclude Include="Property.h" />
     <ClInclude Include="PropertySimpleFactory.h" />
     <ClInclude Include="TaxRate.h" />
+    <ClInclude Include="TaxService.h" />
     <ClInclude Include="UI.h" />
   </ItemGroup>
   <ItemGroup>
