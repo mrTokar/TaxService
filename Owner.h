@@ -11,6 +11,7 @@ class Owner
 	vector<Property*> properties;
 public:
 	Owner(string fullname, string inn, vector<Property*> const& properties);
+	~Owner();
 
 	double calculateTax();
 	double calculateIncomeTax();
