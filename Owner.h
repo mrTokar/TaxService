@@ -1,16 +1,21 @@
 #pragma once
 #include "Property.h"
+#include "PropertySimpleFactory.h"
 #include <string>
 #include <vector>
 using namespace std;
 
-class Owner
+class Owner:
+	public Ijsonio
 {
 	string fullname;
 	string inn;
 	vector<Property*> properties;
 public:
 	Owner(string fullname, string inn, vector<Property*> const& properties);
+
+	nlohmann::json toJson() override;
+	void fromJson(nlohmann::json) override;
 
 	double calculateTax();
 	double calculateIncomeTax();
