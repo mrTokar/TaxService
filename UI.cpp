@@ -3,7 +3,7 @@
 #include <fstream>
 using namespace std;
 
-Owner readjson(ostream& log)
+Owner readjson()
 {
 	string filename;
 	cin.ignore(numeric_limits<streamsize>::max(), '\n');
@@ -12,7 +12,7 @@ Owner readjson(ostream& log)
 
 	ifstream fin(filename);
 	if (!fin.is_open()) {
-		log << "ERROR: File " << filename << " don't exist" << endl;
+		clog << "ERROR: File " << filename << " don't exist" << endl;
 		cout << "ERROR: File " << filename << " don't exist" << endl;
 		return Owner("", "", {});
 	}
@@ -25,7 +25,7 @@ Owner readjson(ostream& log)
 		owner.fromJson(json_file);
 	}
 	catch (exception e) {
-		log << "ERROR: " << e.what() << endl;
+		clog << "ERROR: " << e.what() << endl;
 		cout << "ERROR: " << e.what() << endl;
 		return Owner("", "", {});
 	}
