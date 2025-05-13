@@ -2,6 +2,7 @@
 
 void TaxService::fromJson(string const& filename)
 {
+	// read file 
 	ifstream fin(filename);
 	if (!fin.is_open()) {
 		clog << "ERROR: File " << filename << " don't exist" << endl;
@@ -11,6 +12,7 @@ void TaxService::fromJson(string const& filename)
 	nlohmann::json json_file = nlohmann::json::parse(fin);
 	fin.close();
 	
+	// parse json obj
 	if (json_file.contains("owners")) 
 	{
 		auto json_owners = json_file["owners"].get<vector<nlohmann::json>>();
