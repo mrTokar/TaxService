@@ -12,5 +12,8 @@ Property* PropertySimpleFactory::getProperty(std::string key)
 	else if (key == "CountryHouse") {
 		obj = new CountryHouse(0, 0);
 	}
+	else {
+		throw std::exception("Unknow Property");
+	}
 	return obj;
 }
