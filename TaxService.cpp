@@ -61,7 +61,7 @@ void TaxService::toJson(string const& filename)
 
 const int TaxService::define_file(string const& filename)
 {
-	const regex jsonr(R"(*.json$)");
+	const regex jsonr(R"(.json$)");
 	if (regex_search(filename, jsonr)) {
 		return JSON;
 	}
