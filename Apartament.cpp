@@ -16,14 +16,3 @@ double Apartament::ñalculationTax()
 		return worth * Apartment_LUXURY_TAX;
 	}
 }
-
-void Apartament::fromJson(nlohmann::json json)
-{
-	try {
-		square = json["square"].get<double>();
-		worth = json["worth"].get<unsigned int>();
-	}
-	catch (...) {
-		throw std::runtime_error("No required keys in json");
-	}
-}
