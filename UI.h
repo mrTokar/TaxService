@@ -7,6 +7,7 @@
 #ifndef UI
 #define UI
 
-Owner readjson(ostream& log);
+Owner readjson();
+void writejson(nlohmann::json json);
 
 #endif // !UI

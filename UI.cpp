@@ -31,3 +31,21 @@ Owner readjson()
 	}
 	return owner;
 }
+
+void writejson(nlohmann::json json)
+{
+	string filename;
+	cin.ignore(numeric_limits<streamsize>::max(), '\n');
+	cout << "¬ведите название файла ввода: ";
+	getline(cin, filename);
+
+	ofstream fout(filename);
+	if (!fout.is_open()) {
+		clog << "ERROR: File " << filename << " don't exist" << endl;
+		cout << "ERROR: File " << filename << " don't exist" << endl;
+		return;
+	}
+
+	fout << json.dump(4);
+	fout.close();
+}
