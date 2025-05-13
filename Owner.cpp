@@ -7,14 +7,6 @@ Owner::Owner(string fullname, string inn, vector<Property*> const& properties):
 	this->inn = inn;
 }
 
-Owner::~Owner()
-{
-	for (size_t i = 0; i < properties.size(); i++)
-	{
-		delete properties[i];
-	}
-}
-
 double Owner::calculateTax()
 {
 	double tax = 0;
