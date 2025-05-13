@@ -17,7 +17,7 @@ class TaxService
 
 	const int define_file(string const& filename);
 public:
-	TaxService(string const& input) {};
+	TaxService(string const& input);
 	~TaxService();
 
 };

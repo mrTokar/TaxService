@@ -69,6 +69,19 @@ const int TaxService::define_file(string const& filename)
 	}
 }
 
+TaxService::TaxService(string const& input)
+{
+	switch (define_file(input))
+	{
+	case JSON:
+		fromJson(input);
+		break;
+	default:
+		clog << "Invalid file extension" << endl;
+		throw exception("Invalid file extension");
+	}
+}
+
 TaxService::~TaxService()
 {
 	for (auto& owner : owners)
