@@ -12,7 +12,6 @@ Owner readjson()
 	ifstream fin(filename);
 	if (!fin.is_open()) {
 		clog << "ERROR: File " << filename << " don't exist" << endl;
-		cout << "ERROR: File " << filename << " don't exist" << endl;
 		return Owner("", "", {});
 	}
 
@@ -40,7 +39,6 @@ void writejson(nlohmann::json& json)
 	ofstream fout(filename);
 	if (!fout.is_open()) {
 		clog << "ERROR: File " << filename << " don't exist" << endl;
-		cout << "ERROR: File " << filename << " don't exist" << endl;
 		return;
 	}
 
