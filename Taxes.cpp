@@ -9,8 +9,8 @@ using namespace std;
 
 vector<Owner> generateOwners();
 void freememory(vector<Owner>& owners);
-    Owner& chooseOwner(vector<Owner>& owners);
-    bool show_menu(vector<Owner>& array);
+Owner& chooseOwner(vector<Owner>& owners);
+bool show_menu(vector<Owner>& array);
 
 int main() {
     setlocale(LC_ALL, "ru");
