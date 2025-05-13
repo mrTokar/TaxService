@@ -6,7 +6,7 @@ using namespace std;
 Owner readjson()
 {
 	string filename;
-	cout << "Ââåäèòå íàçâàíèå ôàéëà ââîäà: ";
+	cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã­Ã Ã§Ã¢Ã Ã­Ã¨Ã¥ Ã´Ã Ã©Ã«Ã  Ã¢Ã¢Ã®Ã¤Ã : ";
 	getline(cin, filename);
 
 	ifstream fin(filename);
@@ -32,7 +32,7 @@ Owner readjson()
 void writejson(nlohmann::json& json)
 {
 	string filename;
-	cout << "Ââåäèòå íàçâàíèå ôàéëà ââîäà: ";
+	cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã­Ã Ã§Ã¢Ã Ã­Ã¨Ã¥ Ã´Ã Ã©Ã«Ã  Ã¢Ã¢Ã®Ã¤Ã : ";
 	getline(cin, filename);
 
 	ofstream fout(filename);
