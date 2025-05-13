@@ -19,5 +19,11 @@ int main() {
 	nlohmann::json json= owner.toJson();
 	writejson(json);
 
+	// clear mem
+	for (auto prop : owner.getProperties())
+	{
+		delete prop;
+	}
+
 	return 0;
 }
