@@ -7,7 +7,24 @@
 #ifndef UI
 #define UI
 
-Owner readjson();
-void writejson(nlohmann::json& json);
+void printOwner(Owner const& owner);
+void printOwners(vector<Owner> const& owners);
+
+Owner createNewOwner();
+void editOwner(Owner& owner);
+void deleteOwner(vector<Owner>& owners);
+
+void changeOwnerName(Owner& owner);
+void changeOwnerInn(Owner& owner);
+
+void addProperty(Owner& owner);
+void deleteProperty(Owner& owner);
+
+void calculateTax(Owner& owner);
+void caluclateIncomeTax(Owner& owner);
+
+Property* createNewCar();
+Property* createNewApartament();
+Property* createNewCountryHouse();
 
 #endif // !UI

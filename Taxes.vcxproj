@@ -130,10 +130,8 @@
     <ClCompile Include="Apartament.cpp" />
     <ClCompile Include="Car.cpp" />
     <ClCompile Include="CountryHouse.cpp" />
-    <ClCompile Include="Ijsonio.cpp" />
     <ClCompile Include="Owner.cpp" />
     <ClCompile Include="Property.cpp" />
-    <ClCompile Include="PropertySimpleFactory.cpp" />
     <ClCompile Include="Taxes.cpp" />
     <ClCompile Include="UI.cpp" />
   </ItemGroup>
@@ -141,16 +139,10 @@
     <ClInclude Include="Apartament.h" />
     <ClInclude Include="Car.h" />
     <ClInclude Include="CountryHouse.h" />
-    <ClInclude Include="Ijsonio.h" />
-    <ClInclude Include="json.hpp" />
     <ClInclude Include="Owner.h" />
     <ClInclude Include="Property.h" />
-    <ClInclude Include="PropertySimpleFactory.h" />
     <ClInclude Include="TaxRate.h" />
     <ClInclude Include="UI.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <Text Include="data.json" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
