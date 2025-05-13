@@ -102,6 +102,11 @@ void editOwner(Owner& owner)
 
 void deleteOwner(vector<Owner>& owners)
 {
+    if (owners.size() == 0) {
+        cout << "Удалять некого\n";
+        return;
+    }
+
     int index;
     do {
         cout << "Введите номер владельца: ";
@@ -189,6 +194,10 @@ void deleteProperty(Owner& owner)
     printOwner(owner);
 
     int size = owner.getProperties().size();
+    if (size == 0) {
+        cout << "Удалять нечего" << endl;
+    }
+
     int usr;
     do {
         cout << "Введите номер имущества: ";
