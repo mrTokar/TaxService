@@ -136,7 +136,6 @@
     <ClCompile Include="PropertySimpleFactory.cpp" />
     <ClCompile Include="Taxes.cpp" />
     <ClCompile Include="TaxService.cpp" />
-    <ClCompile Include="UI.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Apartament.h" />
@@ -149,10 +148,13 @@
     <ClInclude Include="PropertySimpleFactory.h" />
     <ClInclude Include="TaxRate.h" />
     <ClInclude Include="TaxService.h" />
-    <ClInclude Include="UI.h" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="data.json" />
+    <Text Include="input.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="output.json" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
