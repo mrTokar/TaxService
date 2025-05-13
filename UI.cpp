@@ -5,8 +5,9 @@ using namespace std;
 void printOwner(Owner const& owner)
 {
     cout << "Собственник: " << owner.getFullname() << ", ИНН: " << owner.getInn() << std::endl;
+    int i = 1;
     for (const auto& property : owner.getProperties()) {
-        cout << "\tОбъект: " << typeid(*property).name() << ", ценность: " << property->getWorth() << endl;
+        cout << "\t" << i++ << ") Объект: " << typeid(*property).name() << ", ценность: " << property->getWorth() << endl;
     }
     cout << endl;
 }
@@ -14,8 +15,10 @@ void printOwner(Owner const& owner)
 void printOwners(vector<Owner> const& owners)
 {
     cout << "=====================" <<endl;
+    int i = 1;
     for (const auto& owner : owners)
     {
+        cout << i++ << ") ";
         printOwner(owner);
     }
     cout << "=====================" << endl;
