@@ -15,7 +15,8 @@ int main() {
 		return 0;
 	}
 
-	writejson(owner.toJson());
+	nlohmann::json json= owner.toJson();
+	writejson(json);
 
 	return 0;
 }
