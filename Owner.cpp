@@ -38,9 +38,14 @@ void Owner::fromJson(nlohmann::json json)
 	for (auto& jproperty : jpropertyes)
 	{
 		key = jproperty.items().begin().key();
-		property = PropertySimpleFactory::getProperty(key);
-		property->fromJson(jproperty[key]);
-		properties.push_back(property);
+		try {
+			property = PropertySimpleFactory::getProperty(key);
+			property->fromJson(jproperty[key]);
+			properties.push_back(property);
+		}
+		catch (exception e) {
+			throw e;
+		}
 	}
 }
 
