@@ -7,3 +7,15 @@
 #include "UI.h"
 using namespace std;
 
+int main() {
+
+	auto owner = readjson();
+
+	if (owner.getFullname() == "") {
+		return 0;
+	}
+
+	writejson(owner.toJson());
+
+	return 0;
+}
