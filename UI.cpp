@@ -6,7 +6,6 @@ using namespace std;
 Owner readjson()
 {
 	string filename;
-	cin.ignore(numeric_limits<streamsize>::max(), '\n');
 	cout << "¬ведите название файла ввода: ";
 	getline(cin, filename);
 
@@ -35,7 +34,6 @@ Owner readjson()
 void writejson(nlohmann::json& json)
 {
 	string filename;
-	cin.ignore(numeric_limits<streamsize>::max(), '\n');
 	cout << "¬ведите название файла ввода: ";
 	getline(cin, filename);
 
