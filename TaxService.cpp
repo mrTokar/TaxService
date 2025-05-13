@@ -1,4 +1,5 @@
 #include "TaxService.h"
+using namespace extensions;
 
 void TaxService::fromJson(string const& filename)
 {
@@ -90,6 +91,19 @@ TaxService::~TaxService()
 		{
 			delete property;
 		}
+	}
+}
+
+void TaxService::calculate_and_save(string const& output)
+{
+	switch (define_file(output))
+	{
+	case JSON:
+		toJson(output);
+		break;
+	default:
+		clog << "Invalid file extension" << endl;
+		throw exception("Invalid file extension");
 	}
 }
 

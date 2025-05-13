@@ -5,8 +5,11 @@
 #include <regex>
 using namespace std;
 
-const int JSON = 1;
-const int ANOTHER = 0;
+namespace extensions
+{
+	const int JSON = 1;
+	const int ANOTHER = 0;
+}
 
 class TaxService
 {
@@ -20,5 +23,6 @@ public:
 	TaxService(string const& input);
 	~TaxService();
 
+	void calculate_and_save(string const& output);
 };
 
