@@ -32,7 +32,7 @@ Owner readjson()
 	return owner;
 }
 
-void writejson(nlohmann::json json)
+void writejson(nlohmann::json& json)
 {
 	string filename;
 	cin.ignore(numeric_limits<streamsize>::max(), '\n');

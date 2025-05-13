@@ -8,6 +8,6 @@
 #define UI
 
 Owner readjson();
-void writejson(nlohmann::json json);
+void writejson(nlohmann::json& json);
 
 #endif // !UI
