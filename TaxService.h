@@ -9,6 +9,7 @@ class TaxService
 	vector<Owner> owners;
 	
 	void fromJson(string const& filename);
+	void toJson(string const& filename);
 public:
 	TaxService(string const& input) {};
 	~TaxService();

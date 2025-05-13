@@ -34,6 +34,28 @@ void TaxService::fromJson(string const& filename)
 	}
 }
 
+void TaxService::toJson(string const& filename)
+{	
+	// create json object 
+	vector<nlohmann::json> json_owners;
+	for (auto& owner : owners)
+	{
+		json_owners.push_back(owner.toJson());
+	}
+	nlohmann::json root;
+	root["owners"] = json_owners;
+
+	// save to file
+	ofstream fout(filename);
+	if (!fout.is_open()) {
+		clog << "ERROR: ñan't open file: " << filename << endl;
+		throw exception("ñan't open file");
+	}
+
+	fout << root.dump(4);
+	fout.close();
+}
+
 TaxService::~TaxService()
 {
 	for (auto& owner : owners)
