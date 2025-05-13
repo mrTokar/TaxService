@@ -58,6 +58,17 @@ void TaxService::toJson(string const& filename)
 	fout.close();
 }
 
+const int TaxService::define_file(string const& filename)
+{
+	const regex jsonr(R"(*.json$)");
+	if (regex_search(filename, jsonr)) {
+		return JSON;
+	}
+	else {
+		return ANOTHER;
+	}
+}
+
 TaxService::~TaxService()
 {
 	for (auto& owner : owners)
