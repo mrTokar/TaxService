@@ -52,11 +52,9 @@ void Owner::fromJson(nlohmann::json json)
 
 void Owner::fromXml(pugi::xml_node& node)
 {
-	try {
-		fullname = node.attribute("fullname").as_string();
-		inn = node.attribute("inn").as_string();
-	}
-	catch (...) {
+	fullname = node.attribute("fullname").as_string();
+	inn = node.attribute("inn").as_string();
+	if (inn == (string)"" || fullname == (string)"") {
 		throw std::runtime_error("No required attribute in xml");
 	}
 		
