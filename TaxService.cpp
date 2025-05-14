@@ -84,6 +84,18 @@ void TaxService::fromXml(string const& filename)
 	}
 }
 
+void TaxService::toXml(string const& filename)
+{
+	xml_document doc;
+	xml_node root = doc.append_child("owners");
+	for (auto& owner : owners)
+	{
+		xml_node xmlowner = root.append_child("owner");
+		owner.toXml(xmlowner);
+	}
+	doc.save_file(filename.c_str(), "\t", format_default);
+}
+
 const int TaxService::define_file(string const& filename)
 {
 	const regex jsonr(R"(.json$)");

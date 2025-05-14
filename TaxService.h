@@ -20,6 +20,7 @@ class TaxService
 	void toJson(string const& filename);
 
 	void fromXml(string const& filename);
+	void toXml(string const& filename);
 
 	const int define_file(string const& filename);
 public:
