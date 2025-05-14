@@ -31,12 +31,10 @@ void Apartament::fromJson(nlohmann::json json)
 
 void Apartament::fromXml(xml_node& node)
 {
-	try {
-		square = node.attribute("square").as_double();
-		worth = node.attribute("worth").as_double();
-	}
-	catch (...) {
-		throw std::runtime_error("No required attribute in xml");
+	square = node.attribute("square").as_double();
+	worth = node.attribute("worth").as_double();
+	if (square == 0 || worth == 0) {
+		throw std::runtime_error("No required keys in json");
 	}
 }
 

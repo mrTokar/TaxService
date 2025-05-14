@@ -31,11 +31,9 @@ void CountryHouse::fromJson(nlohmann::json json)
 
 void CountryHouse::fromXml(xml_node& node)
 {
-	try {
-		distanceFromCity = node.attribute("distance").as_uint();
-		worth = node.attribute("worth").as_double();
-	}
-	catch (...) {
+	distanceFromCity = node.attribute("distance").as_uint();
+	worth = node.attribute("worth").as_double();
+	if (distanceFromCity == 0 || worth == 0) {
 		throw std::runtime_error("No required attribute in xml");
 	}
 }
