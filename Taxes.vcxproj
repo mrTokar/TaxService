@@ -131,6 +131,7 @@
     <ClCompile Include="Car.cpp" />
     <ClCompile Include="CountryHouse.cpp" />
     <ClCompile Include="Ijsonio.cpp" />
+    <ClCompile Include="Ixmlio.cpp" />
     <ClCompile Include="Owner.cpp" />
     <ClCompile Include="Property.cpp" />
     <ClCompile Include="PropertySimpleFactory.cpp" />
@@ -142,6 +143,7 @@
     <ClInclude Include="Car.h" />
     <ClInclude Include="CountryHouse.h" />
     <ClInclude Include="Ijsonio.h" />
+    <ClInclude Include="Ixmlio.h" />
     <ClInclude Include="json.hpp" />
     <ClInclude Include="Owner.h" />
     <ClInclude Include="Property.h" />
