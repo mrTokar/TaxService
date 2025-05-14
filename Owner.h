@@ -6,7 +6,8 @@
 using namespace std;
 
 class Owner:
-	public Ijsonio
+	virtual public Ijsonio,
+	virtual public Ixmlio
 {
 	string fullname;
 	string inn;
@@ -16,6 +17,9 @@ public:
 
 	nlohmann::json toJson() override;
 	void fromJson(nlohmann::json) override;
+
+	void fromXml(pugi::xml_node& node) override;
+	void toXml(pugi::xml_node& root) override;
 
 	double calculateTax();
 	double calculateIncomeTax();
