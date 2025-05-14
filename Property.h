@@ -1,8 +1,10 @@
 #pragma once
 #include "Ijsonio.h"
+#include "Ixmlio.h"
 
 class Property:
-	public Ijsonio
+	virtual public Ijsonio,
+	virtual public Ixmlio
 {
 protected:
 	unsigned int worth;

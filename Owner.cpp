@@ -1,4 +1,5 @@
 #include "Owner.h"
+using namespace pugi;
 
 Owner::Owner(string fullname, string inn, vector<Property*> const& properties):
 	properties(properties)
@@ -46,6 +47,48 @@ void Owner::fromJson(nlohmann::json json)
 		catch (exception e) {
 			throw e;
 		}
+	}
+}
+
+void Owner::fromXml(pugi::xml_node& node)
+{
+	fullname = node.attribute("fullname").as_string();
+	inn = node.attribute("inn").as_string();
+	if (inn == (string)"" || fullname == (string)"") {
+		throw std::runtime_error("No required attribute in xml");
+	}
+		
+	Property* property;
+	string key;
+	for (xml_node xml_property : node.children()) {
+		try {
+			key = xml_property.name();
+			property = PropertySimpleFactory::getProperty(key);
+			property->fromXml(xml_property);
+			properties.push_back(property);
+		}
+		catch (exception e) {
+			throw e;
+		}
+	}
+}
+
+void Owner::toXml(pugi::xml_node& root)
+{
+	xml_node owner = root.append_child("owner");
+
+	xml_attribute fullname_attr = owner.append_attribute("fullname");
+	fullname_attr.set_value(fullname.c_str());
+
+	xml_attribute inn_attr = owner.append_attribute("inn");
+	inn_attr.set_value(inn.c_str());
+
+	xml_attribute sumtax_attr = owner.append_attribute("sumtax");
+	sumtax_attr.set_value(calculateTax());
+
+	for (auto property : properties)
+	{
+		property->toXml(owner);
 	}
 }
 

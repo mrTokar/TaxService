@@ -1,5 +1,6 @@
 #include "TaxService.h"
 using namespace extensions;
+using namespace pugi;
 
 void TaxService::fromJson(string const& filename)
 {
@@ -59,11 +60,54 @@ void TaxService::toJson(string const& filename)
 	fout.close();
 }
 
+void TaxService::fromXml(string const& filename)
+{
+	// read file
+	xml_document xmldoc;
+	xml_parse_result result = xmldoc.load_file(filename.c_str());
+	if (!result) {
+		clog << "ERROR: File " << filename << " don't exist" << endl;
+		throw runtime_error("File don't exist");
+	}
+
+	// parse file
+	Owner owner("", "", {});
+	for (xml_node xmlowner : xmldoc.child("owners").children("owner")) {
+		try {
+			owner.fromXml(xmlowner);
+			owners.push_back(owner);
+		}
+		catch (exception e) {
+			clog << "ERROR: " << e.what() << endl;
+			throw e;
+		}
+	}
+	if (owners.size() == 0) {
+		clog << "No owners were found. Please check the data in the file for correctness.\n";
+	}
+}
+
+void TaxService::toXml(string const& filename)
+{
+	xml_document doc;
+	xml_node root = doc.append_child("owners");
+	for (auto& owner : owners)
+	{
+		xml_node xmlowner = root.append_child("owner");
+		owner.toXml(xmlowner);
+	}
+	doc.save_file(filename.c_str(), "\t", format_default);
+}
+
 const int TaxService::define_file(string const& filename)
 {
 	const regex jsonr(R"(.json$)");
+	const regex xmlr(R"(.xml$)");
 	if (regex_search(filename, jsonr)) {
 		return JSON;
+	}
+	else if (regex_search(filename, xmlr)) {
+		return XML;
 	}
 	else {
 		return ANOTHER;
@@ -76,6 +120,9 @@ TaxService::TaxService(string const& input)
 	{
 	case JSON:
 		fromJson(input);
+		break;
+	case XML:
+		fromXml(input);
 		break;
 	default:
 		clog << "Invalid file extension" << endl;
@@ -100,6 +147,9 @@ void TaxService::calculate_and_save(string const& output)
 	{
 	case JSON:
 		toJson(output);
+		break;
+	case XML:
+		toXml(output);
 		break;
 	default:
 		clog << "Invalid file extension" << endl;

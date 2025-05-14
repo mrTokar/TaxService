@@ -8,6 +8,7 @@ using namespace std;
 namespace extensions
 {
 	const int JSON = 1;
+	const int XML = 2;
 	const int ANOTHER = 0;
 }
 
@@ -17,6 +18,9 @@ class TaxService
 	
 	void fromJson(string const& filename);
 	void toJson(string const& filename);
+
+	void fromXml(string const& filename);
+	void toXml(string const& filename);
 
 	const int define_file(string const& filename);
 public:

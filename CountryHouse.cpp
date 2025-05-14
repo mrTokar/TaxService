@@ -1,6 +1,7 @@
 #include "CountryHouse.h"
 #include "TaxRate.h"
 using namespace TAX_RATES;
+using namespace pugi;
 
 CountryHouse::CountryHouse(int worth, unsigned int distanceFromCity): Property(worth)
 {
@@ -26,4 +27,26 @@ void CountryHouse::fromJson(nlohmann::json json)
 	catch (...) {
 		throw std::runtime_error("No required keys in json");
 	}
+}
+
+void CountryHouse::fromXml(xml_node& node)
+{
+	distanceFromCity = node.attribute("distance").as_uint();
+	worth = node.attribute("worth").as_double();
+	if (distanceFromCity == 0 || worth == 0) {
+		throw std::runtime_error("No required attributs in xml");
+	}
+}
+
+void CountryHouse::toXml(xml_node& root)
+{
+	xml_node apartament = root.append_child("CountryHouse");
+
+	xml_attribute square_attr = apartament.append_attribute("distance");
+	square_attr.set_value(distanceFromCity);
+
+	xml_attribute worth_attr = apartament.append_attribute("worth");
+	worth_attr.set_value(worth);
+
+	apartament.text().set(ñalculationTax());
 }
