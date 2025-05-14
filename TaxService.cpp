@@ -99,8 +99,12 @@ void TaxService::toXml(string const& filename)
 const int TaxService::define_file(string const& filename)
 {
 	const regex jsonr(R"(.json$)");
+	const regex xmlr(R"(.xml$)");
 	if (regex_search(filename, jsonr)) {
 		return JSON;
+	}
+	else if (regex_search(filename, xmlr)) {
+		return XML;
 	}
 	else {
 		return ANOTHER;
@@ -113,6 +117,9 @@ TaxService::TaxService(string const& input)
 	{
 	case JSON:
 		fromJson(input);
+		break;
+	case XML:
+		fromXml(input);
 		break;
 	default:
 		clog << "Invalid file extension" << endl;
@@ -137,6 +144,9 @@ void TaxService::calculate_and_save(string const& output)
 	{
 	case JSON:
 		toJson(output);
+		break;
+	case XML:
+		toXml(output);
 		break;
 	default:
 		clog << "Invalid file extension" << endl;
