@@ -1,5 +1,6 @@
 #include "TaxService.h"
 using namespace extensions;
+using namespace pugi;
 
 void TaxService::fromJson(string const& filename)
 {
@@ -57,6 +58,30 @@ void TaxService::toJson(string const& filename)
 
 	fout << root.dump(4);
 	fout.close();
+}
+
+void TaxService::fromXml(string const& filename)
+{
+	// read file
+	xml_document xmldoc;
+	xml_parse_result result = xmldoc.load_file(filename.c_str());
+	if (!result) {
+		clog << "ERROR: File " << filename << " don't exist" << endl;
+		throw runtime_error("File don't exist");
+	}
+
+	// parse file
+	Owner owner("", "", {});
+	try {
+		for (xml_node xmlowner : xmldoc.child("owners").children("onwer")) {
+			owner.fromXml(xmlowner);
+			owners.push_back(owner);
+		}
+	}
+	catch (exception e) {
+		clog << "ERROR: " << e.what() << endl;
+		throw e;
+	}
 }
 
 const int TaxService::define_file(string const& filename)
