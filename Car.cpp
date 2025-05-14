@@ -35,7 +35,7 @@ void Car::fromJson(nlohmann::json json)
 void Car::fromXml(pugi::xml_node& node)
 {
 	try {
-		horsepower = node.attribute("horsepower").as_double();
+		horsepower = node.attribute("horsepower").as_float();
 		worth = node.attribute("worth").as_double();
 	}
 	catch (...) {
