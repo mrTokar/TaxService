@@ -73,7 +73,7 @@ void TaxService::fromXml(string const& filename)
 	// parse file
 	Owner owner("", "", {});
 	try {
-		for (xml_node xmlowner : xmldoc.child("owners").children("onwer")) {
+		for (xml_node xmlowner : xmldoc.child("owners").children("owner")) {
 			owner.fromXml(xmlowner);
 			owners.push_back(owner);
 		}
