@@ -18,75 +18,69 @@
     <ClCompile Include="Taxes.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="Property.cpp">
+    <ClCompile Include="lib\xml-lib\pugixml.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="Apartament.cpp">
+    <ClCompile Include="TaxService\Owner\Owner.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="Car.cpp">
+    <ClCompile Include="TaxService\Property\Apartament\Apartament.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="CountryHouse.cpp">
+    <ClCompile Include="TaxService\Property\Car\Car.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="Owner.cpp">
+    <ClCompile Include="TaxService\Property\CountryHouse\CountryHouse.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="Ijsonio.cpp">
+    <ClCompile Include="TaxService\Property\Property.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="PropertySimpleFactory.cpp">
+    <ClCompile Include="TaxService\Property\PropertySimpleFactory.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="TaxService.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-    <ClCompile Include="Ixmlio.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-    <ClCompile Include="pugixml.cpp">
+    <ClCompile Include="TaxService\TaxService.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Property.h">
+    <ClInclude Include="Interface\Ijsonio.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="Apartament.h">
+    <ClInclude Include="Interface\Ixmlio.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="Car.h">
+    <ClInclude Include="lib\json-lib\json.hpp">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="CountryHouse.h">
+    <ClInclude Include="lib\xml-lib\pugiconfig.hpp">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="TaxRate.h">
+    <ClInclude Include="lib\xml-lib\pugixml.hpp">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="Owner.h">
+    <ClInclude Include="TaxService\Owner\Owner.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="Ijsonio.h">
+    <ClInclude Include="TaxService\Property\Apartament\Apartament.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="json.hpp">
+    <ClInclude Include="TaxService\Property\Car\Car.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="PropertySimpleFactory.h">
+    <ClInclude Include="TaxService\Property\CountryHouse\CountryHouse.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="TaxService.h">
+    <ClInclude Include="TaxService\Property\Property.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="Ixmlio.h">
+    <ClInclude Include="TaxService\Property\PropertySimpleFactory.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="pugiconfig.hpp">
+    <ClInclude Include="TaxService\TaxRate.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="pugixml.hpp">
+    <ClInclude Include="TaxService\TaxService.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>

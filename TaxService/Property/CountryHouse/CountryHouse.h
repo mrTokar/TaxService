@@ -1,12 +1,14 @@
 #pragma once
-#include "Property.h"
-class Car :
+#include "../Property.h"
+#include "../TaxService/TaxRate.h"
+
+class CountryHouse :
     public Property
 {
-    float horsepower;
+    unsigned int distanceFromCity;
 public:
-    Car(int worth, float horsepower);
-    inline ~Car() override {};
+    CountryHouse(int worth, unsigned int distanceFromCity);
+    inline ~CountryHouse() override {};
     double ñalculationTax() override;
 
     void fromJson(nlohmann::json json) override;

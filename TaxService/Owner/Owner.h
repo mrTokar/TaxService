@@ -1,6 +1,6 @@
 #pragma once
-#include "Property.h"
-#include "PropertySimpleFactory.h"
+#include "../Property/Property.h"
+#include "../Property/PropertySimpleFactory.h"
 #include <string>
 #include <vector>
 using namespace std;

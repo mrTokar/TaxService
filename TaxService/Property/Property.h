@@ -1,6 +1,6 @@
 #pragma once
-#include "Ijsonio.h"
-#include "Ixmlio.h"
+#include "../Interface/Ijsonio.h"
+#include <../Interface/Ixmlio.h>
 
 class Property:
 	virtual public Ijsonio,
