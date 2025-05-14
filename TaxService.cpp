@@ -72,15 +72,18 @@ void TaxService::fromXml(string const& filename)
 
 	// parse file
 	Owner owner("", "", {});
-	try {
-		for (xml_node xmlowner : xmldoc.child("owners").children("owner")) {
+	for (xml_node xmlowner : xmldoc.child("owners").children("owner")) {
+		try {
 			owner.fromXml(xmlowner);
 			owners.push_back(owner);
 		}
+		catch (exception e) {
+			clog << "ERROR: " << e.what() << endl;
+			throw e;
+		}
 	}
-	catch (exception e) {
-		clog << "ERROR: " << e.what() << endl;
-		throw e;
+	if (owners.size() == 0) {
+		clog << "No owners were found. Please check the data in the file for correctness.\n";
 	}
 }
 
