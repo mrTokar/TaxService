@@ -34,7 +34,7 @@ void Apartament::fromXml(xml_node& node)
 	square = node.attribute("square").as_double();
 	worth = node.attribute("worth").as_double();
 	if (square == 0 || worth == 0) {
-		throw std::runtime_error("No required keys in json");
+		throw std::runtime_error("No required attributs in xml");
 	}
 }
 

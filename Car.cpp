@@ -37,7 +37,7 @@ void Car::fromXml(pugi::xml_node& node)
 	horsepower = node.attribute("horsepower").as_float();
 	worth = node.attribute("worth").as_double();
 	if (horsepower == 0 || worth == 0) {
-		throw std::runtime_error("No required attribute in xml");
+		throw std::runtime_error("No required attributs in xml");
 	}
 }
 
