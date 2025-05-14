@@ -104,6 +104,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>lib</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -127,32 +128,30 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Apartament.cpp" />
-    <ClCompile Include="Car.cpp" />
-    <ClCompile Include="CountryHouse.cpp" />
-    <ClCompile Include="Ijsonio.cpp" />
-    <ClCompile Include="Ixmlio.cpp" />
-    <ClCompile Include="Owner.cpp" />
-    <ClCompile Include="Property.cpp" />
-    <ClCompile Include="PropertySimpleFactory.cpp" />
-    <ClCompile Include="pugixml.cpp" />
+    <ClCompile Include="lib\xml-lib\pugixml.cpp" />
     <ClCompile Include="Taxes.cpp" />
-    <ClCompile Include="TaxService.cpp" />
+    <ClCompile Include="TaxService\Owner\Owner.cpp" />
+    <ClCompile Include="TaxService\Property\Apartament\Apartament.cpp" />
+    <ClCompile Include="TaxService\Property\Car\Car.cpp" />
+    <ClCompile Include="TaxService\Property\CountryHouse\CountryHouse.cpp" />
+    <ClCompile Include="TaxService\Property\Property.cpp" />
+    <ClCompile Include="TaxService\Property\PropertySimpleFactory.cpp" />
+    <ClCompile Include="TaxService\TaxService.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Apartament.h" />
-    <ClInclude Include="Car.h" />
-    <ClInclude Include="CountryHouse.h" />
-    <ClInclude Include="Ijsonio.h" />
-    <ClInclude Include="Ixmlio.h" />
-    <ClInclude Include="json.hpp" />
-    <ClInclude Include="Owner.h" />
-    <ClInclude Include="Property.h" />
-    <ClInclude Include="PropertySimpleFactory.h" />
-    <ClInclude Include="pugiconfig.hpp" />
-    <ClInclude Include="pugixml.hpp" />
-    <ClInclude Include="TaxRate.h" />
-    <ClInclude Include="TaxService.h" />
+    <ClInclude Include="Interface\Ijsonio.h" />
+    <ClInclude Include="Interface\Ixmlio.h" />
+    <ClInclude Include="lib\json-lib\json.hpp" />
+    <ClInclude Include="lib\xml-lib\pugiconfig.hpp" />
+    <ClInclude Include="lib\xml-lib\pugixml.hpp" />
+    <ClInclude Include="TaxService\Owner\Owner.h" />
+    <ClInclude Include="TaxService\Property\Apartament\Apartament.h" />
+    <ClInclude Include="TaxService\Property\Car\Car.h" />
+    <ClInclude Include="TaxService\Property\CountryHouse\CountryHouse.h" />
+    <ClInclude Include="TaxService\Property\Property.h" />
+    <ClInclude Include="TaxService\Property\PropertySimpleFactory.h" />
+    <ClInclude Include="TaxService\TaxRate.h" />
+    <ClInclude Include="TaxService\TaxService.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -1,7 +1,7 @@
 #pragma once
-#include "Apartament.h"
-#include "Car.h"
-#include "CountryHouse.h"
+#include "Apartament/Apartament.h"
+#include "Car/Car.h"
+#include "CountryHouse/CountryHouse.h"
 
 class PropertySimpleFactory
 {

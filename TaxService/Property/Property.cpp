@@ -1,4 +1,4 @@
-#include "Property.h"
+#include "../Property/Property.h"
 
 Property::Property(unsigned int worth)
 {
