@@ -154,6 +154,7 @@
     <Text Include="input.json" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="input.xml" />
     <None Include="output.json" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
