@@ -1,6 +1,6 @@
 #pragma once
 #include "../Property.h"
-#include "../TaxService/TaxRate.h"
+#include "../Service/TaxRate.h"
 
 class Car :
     public Property

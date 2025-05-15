@@ -18,12 +18,39 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="lib\xml-lib\pugixml.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="Service\Owner\Owner.cpp" />
+    <ClCompile Include="Service\Property\Apartament\Apartament.cpp" />
+    <ClCompile Include="Service\Property\Car\Car.cpp" />
+    <ClCompile Include="Service\Property\CountryHouse\CountryHouse.cpp" />
+    <ClCompile Include="Service\Property\Property.cpp" />
+    <ClCompile Include="Service\Property\PropertySimpleFactory.cpp" />
+    <ClCompile Include="Service\TaxService.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Interface\Ijsonio.h" />
+    <ClInclude Include="Interface\Ixmlio.h" />
+    <ClInclude Include="lib\json-lib\json.hpp" />
+    <ClInclude Include="lib\xml-lib\pugiconfig.hpp" />
+    <ClInclude Include="lib\xml-lib\pugixml.hpp" />
+    <ClInclude Include="Service\Owner\Owner.h" />
+    <ClInclude Include="Service\Property\Apartament\Apartament.h" />
+    <ClInclude Include="Service\Property\Car\Car.h" />
+    <ClInclude Include="Service\Property\CountryHouse\CountryHouse.h" />
+    <ClInclude Include="Service\Property\Property.h" />
+    <ClInclude Include="Service\Property\PropertySimpleFactory.h" />
+    <ClInclude Include="Service\TaxRate.h" />
+    <ClInclude Include="Service\TaxService.h" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
     <ProjectGuid>{4eb756e1-9453-40bb-a424-a0c0f3dcdc73}</ProjectGuid>
     <RootNamespace>Taxes</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>TaxService</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -127,32 +154,6 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClCompile Include="lib\xml-lib\pugixml.cpp" />
-    <ClCompile Include="Taxes.cpp" />
-    <ClCompile Include="TaxService\Owner\Owner.cpp" />
-    <ClCompile Include="TaxService\Property\Apartament\Apartament.cpp" />
-    <ClCompile Include="TaxService\Property\Car\Car.cpp" />
-    <ClCompile Include="TaxService\Property\CountryHouse\CountryHouse.cpp" />
-    <ClCompile Include="TaxService\Property\Property.cpp" />
-    <ClCompile Include="TaxService\Property\PropertySimpleFactory.cpp" />
-    <ClCompile Include="TaxService\TaxService.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="Interface\Ijsonio.h" />
-    <ClInclude Include="Interface\Ixmlio.h" />
-    <ClInclude Include="lib\json-lib\json.hpp" />
-    <ClInclude Include="lib\xml-lib\pugiconfig.hpp" />
-    <ClInclude Include="lib\xml-lib\pugixml.hpp" />
-    <ClInclude Include="TaxService\Owner\Owner.h" />
-    <ClInclude Include="TaxService\Property\Apartament\Apartament.h" />
-    <ClInclude Include="TaxService\Property\Car\Car.h" />
-    <ClInclude Include="TaxService\Property\CountryHouse\CountryHouse.h" />
-    <ClInclude Include="TaxService\Property\Property.h" />
-    <ClInclude Include="TaxService\Property\PropertySimpleFactory.h" />
-    <ClInclude Include="TaxService\TaxRate.h" />
-    <ClInclude Include="TaxService\TaxService.h" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
