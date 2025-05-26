@@ -39,8 +39,20 @@ void Owner::fromJson(nlohmann::json json)
 	for (auto& jproperty : jpropertyes)
 	{
 		key = jproperty.items().begin().key();
+		if (key == "Apartament") {
+			property = PropertyFactory::create<Apartament>();
+		}
+		else if (key == "Car") {
+			property = PropertyFactory::create<Car>();
+		}
+		else if (key == "CountryHouse") {
+			property = PropertyFactory::create<CountryHouse>();
+		}
+		else {
+			throw exception("Unknow property");
+		}
+
 		try {
-			property = PropertySimpleFactory::getProperty(key);
 			property->fromJson(jproperty[key]);
 			properties.push_back(property);
 		}
@@ -63,7 +75,20 @@ void Owner::fromXml(pugi::xml_node& node)
 	for (xml_node xml_property : node.children()) {
 		try {
 			key = xml_property.name();
-			property = PropertySimpleFactory::getProperty(key);
+
+			if (key == "Apartament") {
+				property = PropertyFactory::create<Apartament>();
+			}
+			else if (key == "Car") {
+				property = PropertyFactory::create<Car>();
+			}
+			else if (key == "CountryHouse") {
+				property = PropertyFactory::create<CountryHouse>();
+			}
+			else {
+				throw exception("Unknow property");
+			}
+
 			property->fromXml(xml_property);
 			properties.push_back(property);
 		}
