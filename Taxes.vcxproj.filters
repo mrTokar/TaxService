@@ -36,9 +36,6 @@
     <ClCompile Include="TaxService\Property\Property.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="TaxService\Property\PropertySimpleFactory.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
     <ClCompile Include="TaxService\TaxService.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
@@ -72,9 +69,6 @@
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
     <ClInclude Include="TaxService\Property\Property.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="TaxService\Property\PropertySimpleFactory.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
     <ClInclude Include="TaxService\TaxRate.h">

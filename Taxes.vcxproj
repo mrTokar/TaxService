@@ -135,7 +135,6 @@
     <ClCompile Include="TaxService\Property\Car\Car.cpp" />
     <ClCompile Include="TaxService\Property\CountryHouse\CountryHouse.cpp" />
     <ClCompile Include="TaxService\Property\Property.cpp" />
-    <ClCompile Include="TaxService\Property\PropertySimpleFactory.cpp" />
     <ClCompile Include="TaxService\TaxService.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -150,7 +149,6 @@
     <ClInclude Include="TaxService\Property\Car\Car.h" />
     <ClInclude Include="TaxService\Property\CountryHouse\CountryHouse.h" />
     <ClInclude Include="TaxService\Property\Property.h" />
-    <ClInclude Include="TaxService\Property\PropertySimpleFactory.h" />
     <ClInclude Include="TaxService\TaxRate.h" />
     <ClInclude Include="TaxService\TaxService.h" />
   </ItemGroup>
