@@ -365,3 +365,9 @@ FodyWeavers.xsd
 #Data Files
 *.json
 *.xml
+
+# Class Diagram
+*.cd
+
+#PDF
+*.pdf
