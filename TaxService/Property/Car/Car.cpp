@@ -2,6 +2,10 @@
 using namespace TAX_RATES;
 using namespace pugi;
 
+Car::Car(): Car(0, 0)
+{
+}
+
 Car::Car(int worth, float horsepower): Property(worth)
 {
 	this->horsepower = horsepower;

@@ -2,6 +2,10 @@
 using namespace TAX_RATES;
 using namespace pugi;
 
+CountryHouse::CountryHouse(): CountryHouse(0,0)
+{
+}
+
 CountryHouse::CountryHouse(int worth, unsigned int distanceFromCity): Property(worth)
 {
 	this->distanceFromCity = distanceFromCity;

@@ -2,6 +2,10 @@
 using namespace TAX_RATES;
 using namespace pugi;
 
+Apartament::Apartament(): Apartament(0, 0)
+{
+}
+
 Apartament::Apartament(int worth, double square): Property(worth)
 {
 	this->square = square;

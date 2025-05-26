@@ -7,6 +7,7 @@ class Car :
 {
     float horsepower;
 public:
+    Car();
     Car(int worth, float horsepower);
     inline ~Car() override {};
     double ñalculationTax() override;

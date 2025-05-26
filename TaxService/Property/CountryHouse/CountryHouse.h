@@ -7,6 +7,7 @@ class CountryHouse :
 {
     unsigned int distanceFromCity;
 public:
+    CountryHouse();
     CountryHouse(int worth, unsigned int distanceFromCity);
     inline ~CountryHouse() override {};
     double ñalculationTax() override;
