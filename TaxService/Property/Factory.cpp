@@ -9,3 +9,13 @@ Property* Factory::create(property_type type)
 	};
 	return m[type];
 }
+
+property_type Factory::getType(std::string str)
+{
+	std::map<std::string, property_type> m = {
+		{"Apartament", APARTAMENT},
+		{"Car", CAR},
+		{"CountryHouse", COUNTRYHOUSE}
+	};
+	return m[str];
+}
