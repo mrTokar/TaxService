@@ -42,6 +42,9 @@
     <ClCompile Include="TaxService\TaxService.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
+    <ClCompile Include="TaxService\Property\Factory.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Interface\Ijsonio.h">
@@ -81,6 +84,9 @@
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
     <ClInclude Include="TaxService\TaxService.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="TaxService\Property\Factory.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>

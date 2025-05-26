@@ -128,6 +128,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="TaxService\Property\Factory.cpp" />
     <ClCompile Include="lib\xml-lib\pugixml.cpp" />
     <ClCompile Include="Taxes.cpp" />
     <ClCompile Include="TaxService\Owner\Owner.cpp" />
@@ -139,6 +140,7 @@
     <ClCompile Include="TaxService\TaxService.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="TaxService\Property\Factory.h" />
     <ClInclude Include="Interface\Ijsonio.h" />
     <ClInclude Include="Interface\Ixmlio.h" />
     <ClInclude Include="lib\json-lib\json.hpp" />
