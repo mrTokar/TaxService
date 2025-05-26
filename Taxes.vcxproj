@@ -144,6 +144,7 @@
     <ClInclude Include="lib\json-lib\json.hpp" />
     <ClInclude Include="lib\xml-lib\pugiconfig.hpp" />
     <ClInclude Include="lib\xml-lib\pugixml.hpp" />
+    <ClInclude Include="TaxService\Property\PropertyFactory.h" />
     <ClInclude Include="TaxService\Owner\Owner.h" />
     <ClInclude Include="TaxService\Property\Apartament\Apartament.h" />
     <ClInclude Include="TaxService\Property\Car\Car.h" />
