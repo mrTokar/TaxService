@@ -40,7 +40,7 @@ void Owner::fromJson(nlohmann::json json)
 	{
 		key = jproperty.items().begin().key();
 		try {
-			property = PropertySimpleFactory::getProperty(key);
+			property = Factory::create(Factory::getType(key));
 			property->fromJson(jproperty[key]);
 			properties.push_back(property);
 		}
@@ -63,7 +63,7 @@ void Owner::fromXml(pugi::xml_node& node)
 	for (xml_node xml_property : node.children()) {
 		try {
 			key = xml_property.name();
-			property = PropertySimpleFactory::getProperty(key);
+			property = Factory::create(Factory::getType(key));
 			property->fromXml(xml_property);
 			properties.push_back(property);
 		}
